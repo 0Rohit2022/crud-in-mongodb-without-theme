@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+          
+        }
+            td{
+                padding: 1rem;
+            }
+        table,
+        input,
+        button {
+            font-size: 2rem;
+           
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Students.forEach((student) => { %>
+                <tr>
+                    <td><%- student._id %></td>
+                    <td><%- student.name %></td>
+                    <td><%- student.email %></td>
+                    <td>
+                        <a href="/edit/<%= student._id %>">Edit</a>
+                        <a href="/delete/<%= student._id %>">Delete</a>
+                    </td>
+
+                </tr>
+           <% }) %>
+            
+        </tbody>
+            
+           
+        </table>
+    </form>
+</body>
+
+</html>

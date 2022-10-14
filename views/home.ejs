@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        table ,input,button{
+            font-size: 2rem;
+        }
+        button{
+            display: flex;
+           justify-content: space-around;
+        }
+        
+    </style>
+</head>
+<body>
+    <form method="post" action="/add" >
+    <table>
+        <tr>
+            <td>Name: <input  type="text" name="name"  autofocus autocomplete="off"></td>
+        </tr>
+        <tr>
+            <td>Email: <input  type="text"  name="email"  autocomplete="off"></td>
+        </tr>
+        <tr>
+            <td> <button type="submit" >Submit</button></td>
+           
+        </tr>
+        <tr>
+            <td> <button><a  style="text-decoration:none; color: black;" href="/show">Display</a></button></td>
+          
+        </tr>
+       
+    </table>
+</form>
+    
+</body>
+</html>
